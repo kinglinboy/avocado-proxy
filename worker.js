@@ -17,7 +17,7 @@ export default {
     headers.delete('CF-Ray');
     headers.delete('CF-Visitor');
 
-
+    console.log("url="+proxyUrl.toString());
     const proxyRequest = new Request(proxyUrl.toString(), {
         method: request.method,
         headers: headers,
