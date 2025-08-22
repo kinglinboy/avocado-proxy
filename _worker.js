@@ -1,13 +1,9 @@
 export default {
 	async fetch(request, env, ctx) {
 		const url = new URL(request.url);
-		switch (url.pathname) {
-			case '/message':
-				return new Response('Hello, World!');
-			case '/random':
-				return new Response(crypto.randomUUID());
-			default:
-				return new Response('Not Found dddd', { status: 404 });
-		}
+		url.hostname = 'avocado-bo-dev.weyatech.cn';
+		console.log(`path:${url.pathname}: search:${url.searchParams}`);
+		const newRequest = new Request(url, request);
+		return fetch(newRequest);
 	},
 };
