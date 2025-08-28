@@ -8,9 +8,9 @@ export default {
 		const avocado_intake_host = 'avocado-customer-dev.weyatech.cn';
 		const avocado_customer_host = 'avocado-customer-dev.weyatech.cn';
 
-		const admin_host = ${env.admin_host};
-		const intake_host = ${env.admin_host};
-		const customer_host = ${env.customer_host};
+		const admin_host = `${env.admin_host}`;
+		const intake_host = `${env.admin_host}`;
+		const customer_host = `${env.customer_host}`;
 
 		const url_host = url.hostname
 		if(customer_host === url_host){
